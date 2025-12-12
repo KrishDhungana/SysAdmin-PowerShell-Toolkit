@@ -1,0 +1,52 @@
+# PowerShell
+*.ps1~                  # PowerShell backups
+*.psm1~                 # Module backups
+PowerShell_profile.ps1  # Local profile
+$PROFILE                # Profile shortcut
+
+# PowerShell output files
+*.csv
+*.html
+*.xml
+*.json
+*.txt
+*.log
+*.md5
+*.sha*
+
+# Module cache/temp
+Modules/
+*.psd1                  # Module manifests (if local)
+*.psm1                  # Compiled modules
+
+# VS Code
+.vscode/settings.json   # Workspace settings
+.vscode/tasks.json      # User tasks
+.vscode/launch.json     # User launch configs
+
+# OS generated
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Logs and temp
+*.log
+logs/
+temp/
+tmp/
+
+# Pester test results
+TestResults/
+xUnitResults.xml
+coverage.html
+test-results.xml
+
+# GitHub Actions
+.github/workflows/*.yml # Keep these, but ignore artifacts
+!/.github/workflows/pester.yml
+
+# IDE temp files
+*.swp
+*.swo
+*~
