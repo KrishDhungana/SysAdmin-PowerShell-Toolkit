@@ -1,65 +1,66 @@
+# ITAdmin-PowerShell Toolkit
 
-# SysAdmin PowerShell Toolkit - Test
+PowerShell scripts and troubleshooting cheat sheets for hybrid IT admins managing Active Directory, Microsoft 365, Exchange Online, and Teams. Read-only queries and reporting focused on real-world tickets.
 
-!PowerShell
-[CI
-!License: MIT
-!Issues
+[![PSScriptAnalyzer](https://github.com/PowerShell/PSScriptAnalyzer/workflows/pSA/badge.svg)](https://github.com/PowerShell/PSScriptAnalyzer)
+[![Pester Tests](https://github.com/yourusername/ITAdmin-PowerShell/workflows/Pester/badge.svg)](https://github.com/yourusername/ITAdmin-PowerShell/actions)
 
-A curated collection of **battle‑tested PowerShell scripts** for system administrators. Focus areas include **Microsoft 365**, **Azure/Entra ID**, **Exchange Online**, **Intune**, **Windows Server**, and **Active Directory**—built for reliability, repeatability, and speed.
+## 🚀 Quick Start
+
+```
+# Clone repo
+git clone https://github.com/yourusername/ITAdmin-PowerShell.git
+cd ITAdmin-PowerShell
+
+# Set execution policy
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+# Review workflows first
+docs/WORKFLOWS.md
+```
+
+## 📁 Modules Overview
+
+| Module | Focus | Key Scripts | Commands |
+|--------|-------|-------------|----------|
+| [ActiveDirectory](ActiveDirectory/) | On-prem AD users/groups | UserQueries.ps1, GroupMembership.ps1 | [Commands.md](ActiveDirectory/Commands.md) |
+| [Microsoft365](Microsoft365/) | Entra ID hybrid sync | EntraUserSync.ps1, ConditionalAccess.ps1 | [Commands.md](Microsoft365/Commands.md) |
+| [ExchangeOnline](ExchangeOnline/) | Mailbox/mail flow | MailboxStats.ps1, MessageTrace.ps1 | [Commands.md](ExchangeOnline/Commands.md) |
+| [Teams](Teams/) | Team/policy audits | TeamSearch.ps1, UserPolicies.ps1 | [Commands.md](Teams/Commands.md) |
+| [Utilities](Utilities/) | Cross-module helpers | UserHealthCheck.ps1, PSDefaultServer.ps1 | [Commands.md](Utilities/Commands.md) |
+
+## 🎯 Common Workflows
+See [docs/WORKFLOWS.md](docs/WORKFLOWS.md) for complete sequences:
+
+- **User Lockout**: `.\Utilities\UserHealthCheck.ps1 -UPN "jdoe@contoso.com"`
+- **Hybrid Sync**: `.\Microsoft365\EntraUserSync.ps1`
+- **Team Audit**: `.\Teams\TeamSearch.ps1 -TeamName "*sales*"`
+
+## 📋 Prerequisites
+- PowerShell 5.1+ or PowerShell 7+
+- Required modules: `ActiveDirectory`, `ExchangeOnlineManagement`, `MicrosoftTeams`, `Microsoft.Graph`
+- Domain/M365 read permissions
+
+## 🛠️ Development
+```
+# Run all tests
+Invoke-Pester
+
+# Lint scripts
+Invoke-ScriptAnalyzer -Path . -Recurse
+
+# Update help
+platyPS\Update-MarkdownHelp.ps1 -Path .\docs\
+```
+
+## 🤝 Contributing
+1. Fork → Clone → Branch (`git checkout -b feature/user-queries`)
+2. Add scripts/tests → `Invoke-Pester`
+3. Commit → PR with ticket scenario
+
+## 📄 License
+MIT License - see [LICENSE](LICENSE) © 2025
 
 ---
 
-## Table of Contents
-
-- Features
-- Quick Start
-- Repository Structure
-- Prerequisites
-- Usage Examples
-- Configuration
-- Best Practices
-- Security Notes
-- Contributing
-- Code Style
-- Roadmap
-- Changelog
-- License
-
----
-
-## Features
-
-- **M365/Entra ID**: License audits, user provisioning checks, MFA status, risky sign‑ins.
-- **Exchange Online**: Mailbox health, GAL visibility, transport rules, shared mailbox automation.
-- **Intune**: Device compliance, app deployments, autopilot status.
-- **Windows/AD**: Fine‑grained password policies, GPO exports, user and group lifecycle.
-- **Automation‑ready**: Consistent logging, idempotent operations, dry‑run modes.
-- **Secure by default**: Least‑privilege tips, secrets via environment variables, safe error handling.
-
----
-
-## Quick Start
-
-```powershell
-# 1) Clone the repo
-git clone https://github.com/YOUR-ORG/YOUR-REPO.git
-cd YOUR-REPO
-
-# 2) Unblock scripts (Windows)
-Get-ChildItem -Recurse *.ps1 | Unblock-File
-
-# 3) Install required modules (you can pin versions in requirements.psd1)
-pwsh -NoLogo -Command {
-    $mods = @(
-      'Microsoft.Graph',            # Graph SDK
-      'ExchangeOnlineManagement',   # EXO
-      'MicrosoftTeams',             # Teams admin
-      'AzureAD'                     # Legacy; use Graph when possible
-    )
-    foreach ($m in $mods) { if (-not (Get-Module -ListAvailable $m)) { Install-Module $m -Scope CurrentUser -Force } }
-}
-
-# 4) Run something safely (dry-run when available)
-.\Scripts\Exchange\Check-GALVisibility.ps1 -Identity user@contoso.com -Verbose
-
+**Built for MSP IT admins troubleshooting hybrid environments daily.**
