@@ -1,4 +1,5 @@
-```markdown
+# Workflows
+```
 # Troubleshooting Workflows
 
 Multi-module sequences for common IT admin scenarios. Combines AD, Entra ID, Exchange, and Teams queries into single workflows.

@@ -1,10 +1,9 @@
-```
 # Exchange Online Commands
 
 Read-only troubleshooting and management queries for daily M365 admin tasks.  
 Assumes `ExchangeOnlineManagement` module is loaded and connected:
 
-```
+
 Connect-ExchangeOnline -UserPrincipalName admin@domain.com
 ```
 
