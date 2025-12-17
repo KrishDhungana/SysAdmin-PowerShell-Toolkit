@@ -2,9 +2,6 @@
 
 PowerShell scripts and troubleshooting cheat sheets for hybrid IT admins managing Active Directory, Microsoft 365, Exchange Online, and Teams. Read-only queries and reporting focused on real-world tickets.
 
-[![PSScriptAnalyzer](https://github.com/PowerShell/PSScriptAnalyzer/workflows/pSA/badge.svg)](https://github.com/PowerShell/PSScriptAnalyzer)
-[![Pester Tests](https://github.com/yourusername/ITAdmin-PowerShell/workflows/Pester/badge.svg)](https://github.com/yourusername/ITAdmin-PowerShell/actions)
-
 ## 🚀 Quick Start
 
 ```
@@ -52,11 +49,6 @@ Invoke-ScriptAnalyzer -Path . -Recurse
 # Update help
 platyPS\Update-MarkdownHelp.ps1 -Path .\docs\
 ```
-
-## 🤝 Contributing
-1. Fork → Clone → Branch (`git checkout -b feature/user-queries`)
-2. Add scripts/tests → `Invoke-Pester`
-3. Commit → PR with ticket scenario
 
 ## 📄 License
 MIT License - see [LICENSE](LICENSE) © 2025

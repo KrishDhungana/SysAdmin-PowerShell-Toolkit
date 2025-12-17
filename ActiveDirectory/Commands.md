@@ -1,6 +1,6 @@
 # Active Directory Commands
 
-Read-only troubleshooting queries for daily IT admin tasks. Assumes AD module loaded and `$PSDefaultParameterValues['*-AD*:Server'] = 'dc01.contoso.com'`.
+Read-only troubleshooting queries for daily IT admin tasks. Assumes AD module loaded and `$PSDefaultParameterValues['*-AD*:Server'] = 'dc.server.com'`.
 
 ## User & Group Queries
 
