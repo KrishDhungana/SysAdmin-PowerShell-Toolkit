@@ -1,4 +1,3 @@
-***
 # Microsoft 365 Commands
 
 Common PowerShell queries and actions for tenant‑wide administration.  

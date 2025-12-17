@@ -1,4 +1,3 @@
-***
 # Microsoft Teams Commands
 
 Common PowerShell commands for managing Microsoft Teams owners, members, settings, and lifecycle tasks.  
