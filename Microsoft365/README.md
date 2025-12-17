@@ -23,5 +23,4 @@ Connect-MgGraph -Scopes "User.Read.All","Group.Read.All","Directory.Read.All"
 - Includes on-prem AD correlation for hybrid troubleshooting
 - Outputs include direct Admin Center links for remediation
 
-See [Commands.md](Commands.md) for 8+ Entra ID/Graph troubleshooting queries.
-```
+See [Commands.md](Commands.md) for Entra ID/Graph troubleshooting queries.S

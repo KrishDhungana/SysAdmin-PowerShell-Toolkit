@@ -25,4 +25,3 @@ Connect-MicrosoftTeams
 - Production-safe (read-only queries only)
 
 See [Commands.md](Commands.md) for 8+ Teams troubleshooting queries.
-```

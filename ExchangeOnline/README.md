@@ -24,4 +24,3 @@ Connect-ExchangeOnline -UserPrincipalName admin@contoso.com
 - Safe for production tenants (read-only operations only)
 
 See [Commands.md](Commands.md) for 10+ quick EXO troubleshooting queries.
-```

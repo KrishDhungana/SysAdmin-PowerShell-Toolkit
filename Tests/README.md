@@ -45,4 +45,3 @@ Invoke-Pester -Exit $LASTEXITCODE
 - Coverage targets: 80%+ per module
 
 Run `Invoke-Pester` before every push to catch issues early.
-```

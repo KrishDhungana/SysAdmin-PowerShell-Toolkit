@@ -55,6 +55,3 @@ Connect-MgGraph -Scopes "User.Read.All","Group.ReadWrite.All","Directory.Read.Al
 
 - [Microsoft Graph PowerShell SDK](https://learn.microsoft.com/powershell/microsoftgraph/overview)
 - [Get started with Microsoft Graph PowerShell](https://learn.microsoft.com/powershell/microsoftgraph/get-started)
-
-
-***

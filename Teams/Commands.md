@@ -53,5 +53,3 @@ Connect-MicrosoftTeams
 - Use `Get-TeamChannel` and `Add-TeamChannel` for channel‑level management if you need finer control.
 - Replace manual `Where-Object` searches with direct `-DisplayName` filters when possible to improve speed.
 - Include `| Format-Table -AutoSize` or `| Export-Csv` when reviewing large outputs.
-
----
