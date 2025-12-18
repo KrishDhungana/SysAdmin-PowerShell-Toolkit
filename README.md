@@ -24,7 +24,7 @@ docs/WORKFLOWS.md
 | [Microsoft365](Microsoft365/) | Entra ID hybrid sync | hybridSync.ps1, licenseCheck.ps1 | [Commands.md](Microsoft365/Commands.md) |
 | [ExchangeOnline](ExchangeOnline/) | Mailbox/mail flow | messageTrace.ps1, mailboxStatus.ps1 | [Commands.md](ExchangeOnline/Commands.md) |
 | [Teams](Teams/) | Team/policy audits | teamsSearch.ps1, membershipLookup.ps1 | [Commands.md](Teams/Commands.md) |
-| [Utilities](Utilities/) | Cross-module helpers | bitlockerSearch.ps1, disErrorDetection.ps1 | [Commands.md](Utilities/Commands.md) |
+| [Utilities](Utilities/) | Cross-module helpers | bitlockerSearch.ps1, diskErrorDetection.ps1 | [Commands.md](Utilities/Commands.md) |
 
 ## 🎯 Common Workflows
 See [docs/WORKFLOWS.md](docs/WORKFLOWS.md) for complete sequences:
