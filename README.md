@@ -20,10 +20,10 @@ docs/WORKFLOWS.md
 
 | Module | Focus | Key Scripts | Commands |
 |--------|-------|-------------|----------|
-| [ActiveDirectory](ActiveDirectory/) | On-prem AD users/groups | UserQueries.ps1, GroupMembership.ps1 | [Commands.md](ActiveDirectory/Commands.md) |
-| [Microsoft365](Microsoft365/) | Entra ID hybrid sync | EntraUserSync.ps1, ConditionalAccess.ps1 | [Commands.md](Microsoft365/Commands.md) |
-| [ExchangeOnline](ExchangeOnline/) | Mailbox/mail flow | MailboxStats.ps1, MessageTrace.ps1 | [Commands.md](ExchangeOnline/Commands.md) |
-| [Teams](Teams/) | Team/policy audits | TeamSearch.ps1, UserPolicies.ps1 | [Commands.md](Teams/Commands.md) |
+| [ActiveDirectory](ActiveDirectory/) | On-prem AD users/groups | expiringUsers.ps1, copyADGroups.ps1 | [Commands.md](ActiveDirectory/Commands.md) |
+| [Microsoft365](Microsoft365/) | Entra ID hybrid sync | hybridSync.ps1, licenseCheck.ps1 | [Commands.md](Microsoft365/Commands.md) |
+| [ExchangeOnline](ExchangeOnline/) | Mailbox/mail flow | messageTrace.ps1, mailboxStatus.ps1 | [Commands.md](ExchangeOnline/Commands.md) |
+| [Teams](Teams/) | Team/policy audits | teamsSearch.ps1, membershipLookup.ps1 | [Commands.md](Teams/Commands.md) |
 | [Utilities](Utilities/) | Cross-module helpers | UserHealthCheck.ps1, PSDefaultServer.ps1 | [Commands.md](Utilities/Commands.md) |
 
 ## 🎯 Common Workflows
