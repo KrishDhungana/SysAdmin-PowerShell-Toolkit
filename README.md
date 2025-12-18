@@ -29,10 +29,6 @@ docs/WORKFLOWS.md
 ## 🎯 Common Workflows
 See [docs/WORKFLOWS.md](docs/WORKFLOWS.md) for complete sequences:
 
-- **User Lockout**: `.\Utilities\UserHealthCheck.ps1 -UPN "jdoe@contoso.com"`
-- **Hybrid Sync**: `.\Microsoft365\EntraUserSync.ps1`
-- **Team Audit**: `.\Teams\TeamSearch.ps1 -TeamName "*sales*"`
-
 ## 📋 Prerequisites
 - PowerShell 5.1+ or PowerShell 7+
 - Required modules: `ActiveDirectory`, `ExchangeOnlineManagement`, `MicrosoftTeams`, `Microsoft.Graph`
@@ -45,13 +41,6 @@ Invoke-Pester
 
 # Lint scripts
 Invoke-ScriptAnalyzer -Path . -Recurse
-
-# Update help
-platyPS\Update-MarkdownHelp.ps1 -Path .\docs\
-```
-
-## 📄 License
-MIT License - see [LICENSE](LICENSE) © 2025
 
 ---
 
