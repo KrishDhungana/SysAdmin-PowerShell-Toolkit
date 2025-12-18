@@ -13,7 +13,7 @@ cd ITAdmin-PowerShell
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 # Review workflows first
-docs/WORKFLOWS.md
+docs/Workflows.md
 ```
 
 ## 📁 Modules Overview
@@ -27,7 +27,7 @@ docs/WORKFLOWS.md
 | [Utilities](Utilities/) | Cross-module helpers | bitlockerSearch.ps1, diskErrorDetection.ps1 | [Commands.md](Utilities/Commands.md) |
 
 ## 🎯 Common Workflows
-See [docs/WORKFLOWS.md](docs/WORKFLOWS.md) for complete sequences:
+See [docs/Workflows.md](docs/Workflows.md) for complete sequences:
 
 ## 📋 Prerequisites
 - PowerShell 5.1+ or PowerShell 7+
