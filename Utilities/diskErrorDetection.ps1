@@ -25,12 +25,12 @@ try {
     
     # Parse result properly (not string comparison)
     if ($repairResult.OperationStatus -eq "NoErrorsFound") {
-        Write-Host "✓ No disk errors found" -ForegroundColor Green
+        Write-Host "No disk errors found" -ForegroundColor Green
         Write-Output "Clean" | Tee-Object -FilePath $LogPath -Append
         exit 0
     }
     elseif ($repairResult.OperationStatus -eq "RepairScanCompleted") {
-        Write-Host "⚠️  Errors found - repair needed" -ForegroundColor Yellow
+        Write-Host "Errors found - repair needed" -ForegroundColor Yellow
         Write-Output "ErrorsDetected" | Tee-Object -FilePath $LogPath -Append
         exit 1
     }
@@ -42,12 +42,12 @@ catch {
     $chkdsk = & chkdsk.exe /scan $SystemDrive 2>&1
     
     if ($chkdsk -match "0 KB in bad sectors") {
-        Write-Host "✓ CHKDSK: No errors" -ForegroundColor Green
+        Write-Host "CHKDSK: No errors" -ForegroundColor Green
         $chkdsk | Tee-Object -FilePath $LogPath -Append
         exit 0
     }
     else {
-        Write-Host "❌ CHKDSK: Errors detected" -ForegroundColor Red
+        Write-Host "CHKDSK: Errors detected" -ForegroundColor Red
         $chkdsk | Tee-Object -FilePath $LogPath -Append
         exit 1
     }

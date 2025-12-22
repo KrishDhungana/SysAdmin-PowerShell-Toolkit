@@ -2,7 +2,7 @@
 
 PowerShell scripts and troubleshooting cheat sheets for hybrid IT admins managing Active Directory, Microsoft 365, Exchange Online, and Teams. Read-only queries and reporting focused on real-world tickets.
 
-## 🚀 Quick Start
+## Quick Start
 
 ```
 # Clone repo
@@ -16,7 +16,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 docs/Workflows.md
 ```
 
-## 📁 Modules Overview
+## Modules Overview
 
 | Module | Focus | Key Scripts | Commands |
 |--------|-------|-------------|----------|
@@ -26,15 +26,15 @@ docs/Workflows.md
 | [Teams](Teams/) | Team/policy audits | teamsSearch.ps1, membershipLookup.ps1 | [Commands.md](Teams/Commands.md) |
 | [Utilities](Utilities/) | Cross-module helpers | bitlockerSearch.ps1, diskErrorDetection.ps1 | [Commands.md](Utilities/Commands.md) |
 
-## 🎯 Common Workflows
+## Common Workflows
 See [docs/Workflows.md](docs/Workflows.md) for complete sequences:
 
-## 📋 Prerequisites
+## Prerequisites
 - PowerShell 5.1+ or PowerShell 7+
 - Required modules: `ActiveDirectory`, `ExchangeOnlineManagement`, `MicrosoftTeams`, `Microsoft.Graph`
 - Domain/M365 read permissions
 
-## 🛠️ Development
+## Development
 ```
 # Run all tests
 Invoke-Pester
