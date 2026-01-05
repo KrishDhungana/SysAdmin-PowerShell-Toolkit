@@ -1,0 +1,22 @@
+Import-Module MicrosoftTeams
+$upn = "email@domain.com"
+
+Connect-MicrosoftTeams
+
+$teams = Get-Team -User $upn       # Teams the user belongs to
+
+$result = foreach ($t in $teams) {
+    $channels = Get-TeamChannel -GroupId $t.GroupId              # list channels in that team
+    foreach ($c in $channels) {
+        [PSCustomObject]@{
+            UserUPN      = $upn
+            TeamName     = $t.DisplayName
+            TeamGroupId  = $t.GroupId
+            ChannelName  = $c.DisplayName
+            ChannelId    = $c.Id
+            Membership   = $c.MembershipType   # Standard / Private / Shared
+        }
+    }
+}
+
+$result | Format-Table
